@@ -72,7 +72,7 @@ And all files have changed accordingly on disk
 ## API reference
 ### replace
 *replace* is an array of source files that is searched for the strings to be replaced.
-It supports [minimatch][minimatch] paths.
+It supports [minimatch paths]: https://github.com/isaacs/minimatch.
 
 ### replacement
 *replacement* is a string for which we search and replace by the hash.
@@ -80,3 +80,6 @@ It supports [minimatch][minimatch] paths.
 ### file
 *file* is the file which will be renamed to filename-HASH-OF-FILE-CONTENTS.ext. The hash is generated based on the file
 contents of this parameter.
+
+## Credits
+This plugin is build on top of [grunt-text-replace](https://github.com/yoniholmes/grunt-text-replace/) and was inspired by [grunt-cache-bust](https://github.com/hollandben/grunt-cache-bust)
