@@ -10,12 +10,14 @@
 	"engines": {
 		"node": ">= 0.8.0"
 	},
+	"dependencies": {
+		"grunt-text-replace": "~0.3.8"
+	},
 	"devDependencies": {
 		"grunt": "~0.4.0"
 	},
 	"peerDependencies": {
-		"grunt": "~0.4.0",
-		"grunt-text-replace": "~0.3.8"
+		"grunt": "~0.4.0"
 	},
 	"keywords": [
 		"grunt",
