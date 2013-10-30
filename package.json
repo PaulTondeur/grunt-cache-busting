@@ -1,11 +1,11 @@
 {
-	"name": "grunt-cache-buster",
+	"name": "grunt-cache-busting",
 	"description": "Simplistic cache busting",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": "Paul Tondeur <paul@paultondeur.nl>",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/PaulTondeur/grunt-cache-buster.git"
+		"url": "git://github.com/PaulTondeur/grunt-cache-busting.git"
 	},
 	"engines": {
 		"node": ">= 0.8.0"
@@ -20,6 +20,7 @@
 	"keywords": [
 		"grunt",
 		"cache",
-		"buster"
+		"buster",
+		"busting"
 	]
 }
