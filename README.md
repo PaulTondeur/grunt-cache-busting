@@ -72,7 +72,7 @@ And all files have changed accordingly on disk
 ## API reference
 ### replace
 *replace* is an array of source files that is searched for the strings to be replaced.
-It supports [minimatch paths]: https://github.com/isaacs/minimatch.
+It supports [minimatch paths](https://github.com/isaacs/minimatch).
 
 ### replacement
 *replacement* is a string for which we search and replace by the hash.
