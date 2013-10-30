@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 		crypto = require('crypto'),
 		gruntTextReplace = require('grunt-text-replace/lib/grunt-text-replace');
 
-	grunt.registerMultiTask('cache-buster', 'Cache bust file and update references', function() {
+	grunt.registerMultiTask('cache-busting', 'Cache bust file and update references', function() {
 		var fileContents = grunt.file.read(this.data.file),
 			hash = crypto.createHash('md5').update(fileContents).digest("hex"),
 			outputDir = path.dirname(this.data.file),
