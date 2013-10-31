@@ -75,7 +75,7 @@ And all files have changed accordingly on disk
 It supports [minimatch paths](https://github.com/isaacs/minimatch).
 
 ### replacement
-*replacement* is a string for which we search and replace by the hash.
+*replacement* is a string for which we search and replace by the hash. If it contains an extension, the extension will be preserved.
 
 ### file
 *file* is the file which will be renamed to filename-HASH-OF-FILE-CONTENTS.ext. The hash is generated based on the file
