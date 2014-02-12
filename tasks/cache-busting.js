@@ -23,6 +23,11 @@ module.exports = function (grunt) {
 
 		fs.rename(this.data.file, outputFile);
 
+		replacementBase = path.basenmae(this.data.replacement, replacementExtension)
+		grunt.log.writeln(replacementBase)
+		grunt.log.writeln("hello")
+		// var regex = new RegExp()
+
 		gruntTextReplace.replace({
 			src: this.data.replace,
 			overwrite: true,
