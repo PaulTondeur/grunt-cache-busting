@@ -25,6 +25,7 @@ module.exports = function (grunt) {
 
 		replacementBase = path.basenmae(this.data.replacement, replacementExtension)
 		grunt.log.writeln(replacementBase)
+		grunt.log.writeln("hello")
 		// var regex = new RegExp()
 
 		gruntTextReplace.replace({
