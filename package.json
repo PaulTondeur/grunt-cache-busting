@@ -1,28 +1,29 @@
 {
-	"name": "grunt-cache-busting",
-	"description": "Simplistic cache busting",
-	"version": "0.0.7",
-	"author": "Paul Tondeur <paul@paultondeur.nl>",
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/PaulTondeur/grunt-cache-busting.git"
-	},
-	"engines": {
-		"node": ">= 0.8.0"
-	},
-	"dependencies": {
-		"grunt-text-replace": "~0.3.8"
-	},
-	"devDependencies": {
-		"grunt": "~0.4.0"
-	},
-	"peerDependencies": {
-		"grunt": "~0.4.0"
-	},
-	"keywords": [
-		"grunt",
-		"cache",
-		"buster",
-		"busting"
-	]
+  "name": "grunt-cache-busting",
+  "description": "Simplistic cache busting",
+  "version": "0.0.7",
+  "author": "Paul Tondeur <paul@paultondeur.nl>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/PaulTondeur/grunt-cache-busting.git"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+    "grunt-text-replace": "~0.3.8"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.0",
+    "glob": "~3.2.8"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.0"
+  },
+  "keywords": [
+    "grunt",
+    "cache",
+    "buster",
+    "busting"
+  ]
 }
