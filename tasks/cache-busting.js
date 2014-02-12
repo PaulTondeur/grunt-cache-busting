@@ -15,18 +15,13 @@ module.exports = function (grunt) {
 			outputFile = outputDir + path.sep + replacementWithoutExtension + "-" + hash + fileExtension;
 
     if (this.data.cleanup) {
-      files = glob.sync(outputDir + path.sep + replacementWithoutExtension + "-*" + hash + fileExtension);
+      files = glob.sync(outputDir + path.sep + replacementWithoutExtension + "-*" + fileExtension);
       files.forEach(function(file){
         fs.unlink(file);
       })
     }
 
 		fs.rename(this.data.file, outputFile);
-
-		replacementBase = path.basenmae(this.data.replacement, replacementExtension)
-		grunt.log.writeln(replacementBase)
-		grunt.log.writeln("hello")
-		// var regex = new RegExp()
 
 		gruntTextReplace.replace({
 			src: this.data.replace,
