@@ -2,6 +2,7 @@ module.exports = function (grunt) {
 	var fs     = require('fs'),
 		path   = require('path'),
 		crypto = require('crypto'),
+        glob = require('glob'),
 		gruntTextReplace = require('grunt-text-replace/lib/grunt-text-replace');
 
 	grunt.registerMultiTask('cache-busting', 'Cache bust file and update references', function() {
@@ -25,7 +26,12 @@ module.exports = function (grunt) {
 			});
 
 		} else {
-
+			if (this.data.cleanup) {
+				var files = glob.sync(outputDir + path.sep + replacementWithoutExtension + "-*" + fileExtension);
+				files.forEach(function(file){
+					fs.unlink(file);
+				})
+			}
 			fs.rename(this.data.file, outputFile);
 
 			gruntTextReplace.replace({
