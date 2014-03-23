@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 	var fs     = require('fs'),
 		path   = require('path'),
 		crypto = require('crypto'),
-        glob = require('glob'),
+		glob = require('glob'),
 		gruntTextReplace = require('grunt-text-replace/lib/grunt-text-replace');
 
 	grunt.registerMultiTask('cache-busting', 'Cache bust file and update references', function() {

@@ -33,7 +33,8 @@ grunt.loadNpmTasks('grunt-cache-busting');
 	css: {
 		replace: ['tmp/**/*.html'],
 		replacement: 'style.css',
-		file: 'tmp/deploy/css/style.css'
+		file: 'tmp/deploy/css/style.css',
+		cleanup: true //Remove previously generated hashed files.
 	}
 },
 ```
@@ -67,7 +68,6 @@ After running ```grunt cache-busting```, this file will look like this, and the 
 </html>
 ```
 
-
 Optionally, you can pass the `get_param` option to simply append a parameter to the path of the file. This is useful if you need to change the contents of a file, but not the filename.
 
 ```javascript
@@ -76,7 +76,7 @@ Optionally, you can pass the `get_param` option to simply append a parameter to 
 		replace: ['tmp/**/*.html'],
 		replacement: 'style.css',
 		file: 'tmp/deploy/css/style.css',
-		'get_param': true
+		get_param: true,
 	}
 },
 ```
