@@ -13,15 +13,30 @@ module.exports = function (grunt) {
 			replacementWithoutExtension = this.data.replacement.slice(0, this.data.replacement.length - replacementExtension.length),
 			outputFile = outputDir + path.sep + replacementWithoutExtension + "-" + hash + fileExtension;
 
-		fs.rename(this.data.file, outputFile);
+		if (this.data.get_param){
 
-		gruntTextReplace.replace({
-			src: this.data.replace,
-			overwrite: true,
-			replacements: [{
-				from: this.data.replacement,
-				to: replacementWithoutExtension + "-" + hash + replacementExtension
-			}]
-		});
+			gruntTextReplace.replace({
+				src: this.data.replace,
+				overwrite: true,
+				replacements: [{
+					from: this.data.replacement,
+					to: this.data.replacement + "?v=" + hash
+				}]
+			});
+
+		} else {
+
+			fs.rename(this.data.file, outputFile);
+
+			gruntTextReplace.replace({
+				src: this.data.replace,
+				overwrite: true,
+				replacements: [{
+					from: this.data.replacement,
+					to: replacementWithoutExtension + "-" + hash + replacementExtension
+				}]
+			});
+
+		}
 	});
 };

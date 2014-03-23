@@ -53,7 +53,7 @@ Say that the index.html looks like this:
 </html>
 ```
 
-After running ```grunt cache-busting```, this file will look like:
+After running ```grunt cache-busting```, this file will look like this, and the files have changed accordingly on disk:
 ```html
 <html>
 <head>
@@ -67,7 +67,34 @@ After running ```grunt cache-busting```, this file will look like:
 </html>
 ```
 
-And all files have changed accordingly on disk
+
+Optionally, you can pass the `get_param` option to simply append a parameter to the path of the file. This is useful if you need to change the contents of a file, but not the filename.
+
+```javascript
+'cache-busting': {
+	css: {
+		replace: ['tmp/**/*.html'],
+		replacement: 'style.css',
+		file: 'tmp/deploy/css/style.css',
+		'get_param': true
+	}
+},
+```
+
+Will change the html above to this:
+```html
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css?v=HASH-OF-FILE-CONTENTS" />
+
+	<script data-main="js/app/MainApp-HASH-OF-FILE-CONTENTS" src="js/vendors/requirejs/require.js"></script>
+</head>
+<body>
+
+</body>
+</html>
+```
+
 
 ## API reference
 ### replace
