@@ -70,7 +70,7 @@ After running ```grunt cache-busting```, this file will look like this, and the 
 
 Optionally, you can pass the `get_param` option to simply append a query string parameter to the path of the file. This is useful if you need to change the contents of a file, but not the filename.
 
-*Note:  Some proxy servers do not re-request assets when a new query string is used.  If a significant portion of your users use proxy servers, you may want to change the filename instead of appending a query string.*
+*Note: Some proxy servers do not re-request assets when a new query string is used. If a significant portion of your users use proxy servers, you may want to change the filename instead of appending a query string.*
 
 ```javascript
 'cache-busting': {
