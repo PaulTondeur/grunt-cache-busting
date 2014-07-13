@@ -1,7 +1,7 @@
 {
 	"name": "grunt-cache-busting",
 	"description": "Simplistic cache busting",
-	"version": "0.0.8",
+	"version": "0.0.10",
 	"author": "Paul Tondeur <paul@paultondeur.nl>",
 	"repository": {
 		"type": "git",
