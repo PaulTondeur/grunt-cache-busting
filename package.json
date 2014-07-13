@@ -11,7 +11,8 @@
 		"node": ">= 0.8.0"
 	},
 	"dependencies": {
-		"grunt-text-replace": "~0.3.8"
+		"grunt-text-replace": "~0.3.8",
+		"glob": "~4.0.4"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.0"
