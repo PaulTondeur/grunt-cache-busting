@@ -33,12 +33,12 @@ module.exports = function (grunt) {
 				})
 			}
 			fs.rename(this.data.file, outputFile);
-
+			var from = replacementWithoutExtension + (replacementExtension ? "((\-?)(.+)*)" + replacementExtension : '');
 			gruntTextReplace.replace({
 				src: this.data.replace,
 				overwrite: true,
 				replacements: [{
-					from: new RegExp(replacementWithoutExtension + "((\-?)(.+)*)" + replacementExtension),
+					from: new RegExp(from),
 					to: replacementWithoutExtension + "-" + hash + replacementExtension
 				}]
 			});
